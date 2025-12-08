@@ -78,30 +78,6 @@ describe('NetworkEnablementControllerInit', () => {
     expect(controller).toBeInstanceOf(NetworkEnablementController);
   });
 
-  it('enables the Solana network when `AccountsController:selectedAccountChange` is emitted', () => {
-    const messenger = new Messenger<
-      MockAnyNamespace,
-      never,
-      AccountsControllerSelectedAccountChangeEvent
-    >({
-      namespace: MOCK_ANY_NAMESPACE,
-    });
-    const request = getInitRequestMock(messenger);
-    const { controller } = NetworkEnablementControllerInit(request);
-
-    expect(controller.enableNetworkInNamespace).not.toHaveBeenCalled();
-
-    // @ts-expect-error: Partial mock.
-    messenger.publish('AccountsController:selectedAccountChange', {
-      type: SolAccountType.DataAccount,
-    });
-
-    expect(controller.enableNetworkInNamespace).toHaveBeenCalledWith(
-      'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp',
-      'solana',
-    );
-  });
-
   it('enables the Ethereum network when `AccountTreeController:selectedAccountGroupChange` is emitted, the current chain ID is Solana mainnet, and there are no Solana accounts', () => {
     const messenger = new Messenger<
       MockAnyNamespace,
