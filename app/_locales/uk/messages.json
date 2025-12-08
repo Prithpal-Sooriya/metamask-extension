@@ -620,7 +620,7 @@
   "symbol": {
     "message": "Символ"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "Символ повинен містити 11 символів або менше."
   },
   "terms": {

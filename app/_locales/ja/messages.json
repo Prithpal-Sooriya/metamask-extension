@@ -6944,7 +6944,7 @@
   "symbol": {
     "message": "シンボル"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "シンボルは11文字以下でなければなりません."
   },
   "syncing": {

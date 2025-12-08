@@ -7836,8 +7836,8 @@
   "symbol": {
     "message": "Symbol"
   },
-  "symbolBetweenZeroTwelve": {
-    "message": "Symbol must be 11 characters or fewer."
+  "symbolBetweenZeroTwenty": {
+    "message": "Symbol must be 20 characters or fewer."
   },
   "syncing": {
     "message": "Syncing..."

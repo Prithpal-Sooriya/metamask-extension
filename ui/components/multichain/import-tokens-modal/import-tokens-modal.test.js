@@ -163,13 +163,55 @@ describe('ImportTokensModal', () => {
         ).toBeInTheDocument(),
       );
 
-      const tokenSymbol = 'META';
+      const tokenSymbol = 'METAMETAMETAMETAMETA';
+      const event = { target: { value: tokenSymbol } };
+      fireEvent.change(getByTestId('import-tokens-modal-custom-symbol'), event);
+
+      const tokenPrecision = '18';
+      const event2 = { target: { value: tokenPrecision } };
+      fireEvent.change(
+        getByTestId('import-tokens-modal-custom-decimals'),
+        event2,
+      );
+
+      expect(
+        getByTestId('import-tokens-modal-custom-symbol').value,
+      ).toStrictEqual(tokenSymbol);
+      expect(getByText('Next')).not.toBeDisabled();
+    });
+
+    it('validates token symbol length', async () => {
+      const { getByText, getByTestId } = render();
+      const customTokenButton = getByText('Custom token');
+      fireEvent.click(customTokenButton);
+
+      // Enter token address first
+      const tokenAddress = '0xB7b78f0Caa05C4743b231ACa619f60124FEA4261';
+      const eventTokenAddress = { target: { value: tokenAddress } };
+      fireEvent.change(
+        getByTestId('import-tokens-modal-custom-address'),
+        eventTokenAddress,
+      );
+
+      expect(
+        getByTestId('import-tokens-modal-custom-address').value,
+      ).toStrictEqual(tokenAddress);
+
+      // wait for the symbol input to be in the document
+      await waitFor(() =>
+        expect(
+          getByTestId('import-tokens-modal-custom-symbol'),
+        ).toBeInTheDocument(),
+      );
+
+      const tokenSymbol = 'METAMETAMETAMETAMETAM';
       const event = { target: { value: tokenSymbol } };
       fireEvent.change(getByTestId('import-tokens-modal-custom-symbol'), event);
 
       expect(
         getByTestId('import-tokens-modal-custom-symbol').value,
       ).toStrictEqual(tokenSymbol);
+      expect(getByText('Next')).toBeDisabled();
     });
 
     it('edits token decimal precision', async () => {

@@ -6944,7 +6944,7 @@
   "symbol": {
     "message": "Symbol"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "Das Symbol darf maximal 11 Zeichen lang sein."
   },
   "syncing": {

@@ -6944,7 +6944,7 @@
   "symbol": {
     "message": "Σύμβολο"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "Το σύμβολο πρέπει να αποτελείται από 11 ή λιγότερους χαρακτήρες."
   },
   "syncing": {

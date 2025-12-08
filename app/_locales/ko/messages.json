@@ -6944,7 +6944,7 @@
   "symbol": {
     "message": "기호"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "기호는 11자 이하여야 합니다."
   },
   "syncing": {

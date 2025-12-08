@@ -6941,7 +6941,7 @@
   "symbol": {
     "message": "प्रतीक"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "प्रतीक 11 वर्ण या उससे कम का होना चाहिए।"
   },
   "syncing": {

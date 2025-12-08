@@ -6941,7 +6941,7 @@
   "symbol": {
     "message": "符号"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "符号不得超过11个字符。"
   },
   "syncing": {

@@ -1322,7 +1322,7 @@
   "symbol": {
     "message": "Simbolo"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "Il simbolo deve essere lungo tra 0 e 12 caratteri."
   },
   "terms": {

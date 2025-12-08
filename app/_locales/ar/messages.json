@@ -621,7 +621,7 @@
   "symbol": {
     "message": "رمز"
   },
-  "symbolBetweenZeroTwelve": {
+  "symbolBetweenZeroTwenty": {
     "message": "يجب أن يكون الرمز 11 حرفًا أو أقل."
   },
   "terms": {
