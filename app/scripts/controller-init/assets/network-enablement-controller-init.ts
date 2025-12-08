@@ -162,19 +162,6 @@ export const NetworkEnablementControllerInit: ControllerInitFunction<
     },
   });
 
-  // TODO: Remove this after BIP-44 rollout.
-  initMessenger.subscribe(
-    'AccountsController:selectedAccountChange',
-    (account) => {
-      if (account.type === SolAccountType.DataAccount) {
-        controller.enableNetworkInNamespace(
-          SolScope.Mainnet,
-          KnownCaipNamespace.Solana,
-        );
-      }
-    },
-  );
-
   initMessenger.subscribe(
     'AccountTreeController:selectedAccountGroupChange',
     () => {
